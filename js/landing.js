@@ -244,7 +244,7 @@ var update = function()
     //var cameraPoint = new THREE.Vector3(centered.x, 2, centered.z);
     var point = new THREE.Vector3(3.5, -3.5, 3.5);
     var axis = new THREE.Vector3(0 , 1, 1);
-    var theta = .01;
+    var theta = .005;
     var pointIsWorld = false;
     //rotateAboutPoint(light, point, axis, theta, pointIsWorld);
 
