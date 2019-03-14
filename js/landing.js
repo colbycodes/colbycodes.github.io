@@ -6,6 +6,7 @@ var spheres = new Array(sphereCount);
 var lines = new Array(3);
 var blockGroups = new Array(6);
 var cubeGroup = new THREE.Group();
+
 //width and height of window 
 var width = window.innerWidth;
 var height = window.innerHeight;
@@ -74,28 +75,10 @@ var sphere = CreateSphere(2);
 sphere.position.set(light.position.x, light.position.y, light.position.z);
 welcomeScene.add( sphere )
 
-//create spheres
-// for(i = 0; i < spheres.length; i++)
-// {
-//     spheres[i] = CreateSphere(.05);
-//     spheres[i].position.x = GetRandomBetween(70, 1);
-//     spheres[i].position.y = GetRandomBetween(10, 7);
-//     spheres[i].position.z = GetRandomBetween(70, 1);
-//     welcomeScene.add(spheres[i]);
-// }
-
-//create connecting lines
-for(i = 0; i < lines.length; i++)
-{
-    // lines[i] = CreateLineBetween(new THREE.Vector3(20, -40, 10), new THREE.Vector3(20, 40, 10));
-}
-
-//generate a block with 10x10 lots
-
 function CreateFloor(size)
 {
     var geometry = new THREE.PlaneGeometry( size, size, 32 );
-    var material = new THREE.MeshToonMaterial( {color: 0x21252d} );
+    var material = new THREE.MeshBasicMaterial( {color: 0x21252d} );
     var plane = new THREE.Mesh( geometry, material );
     plane.rotateOnAxis(new THREE.Vector3(1, 0, 0), -90 * (Math.PI / 180));
     //welcomeScene.add( plane );
@@ -223,7 +206,6 @@ window.onload = function(){
     var intro = document.getElementById("WelcomeRender");
     intro.appendChild(renderer.domElement);
     GameLoop();
-    //about.appendChild(renderer2.domElement);
 };
 //window resize listener
 window.addEventListener('resize', function()
@@ -240,39 +222,13 @@ window.addEventListener('resize', function()
 var update = function()
 {
     //rotate light around most centered lot
-    //var centered = ObjectsCenter();
-    //var cameraPoint = new THREE.Vector3(centered.x, 2, centered.z);
     var point = new THREE.Vector3(3.5, -3.5, 3.5);
     var axis = new THREE.Vector3(0 , 1, 1);
-    var theta = .005;
+    var theta = .003;
     var pointIsWorld = false;
-    //rotateAboutPoint(light, point, axis, theta, pointIsWorld);
 
-    //give 
     sphere.position.set(light.position.x, light.position.y, light.position.z);
-    //cubeGroup.rotateOnAxis(new THREE.Vector3(1, 0, 1), .01);
-    rotateAboutPoint(cubeGroup, point, axis, theta, pointIsWorld);
-    //rotate spheres
-    // spheres.forEach(element => {
-    //     var point = new THREE.Vector3(centered.x, 0, centered.z);
-    //     var axis = new THREE.Vector3(0 , 1, 0);
-    //     var theta = .001;
-    //     var pointIsWorld = false;
-    //     rotateAboutPoint(element, point, axis, theta, pointIsWorld);
-    // });
-
-    //update line verticies for stars strings
-    // for(i = 0; i < lines.length; i++)
-    // {
-    //     lines[i].geometry.vertices[0].x = spheres[i].position.x;
-    //     lines[i].geometry.vertices[0].y = spheres[i].position.y;
-    //     lines[i].geometry.vertices[0].z = spheres[i].position.z;
-    //     lines[i].geometry.vertices[1].x = spheres[i].position.x;
-    //     lines[i].geometry.vertices[1].y = spheres[i].position.y + 10;
-    //     lines[i].geometry.vertices[1].z = spheres[i].position.z;
-    //     lines[i].geometry.verticesNeedUpdate = true;
-    // }           
-   
+    rotateAboutPoint(cubeGroup, point, axis, theta, pointIsWorld); 
 };
 
 // draw scenes

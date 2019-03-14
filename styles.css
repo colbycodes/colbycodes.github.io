@@ -67,7 +67,6 @@ canvas{
 }
 
 .card{
-    margin:auto;
     margin-right: 5vw;
     margin-left: 5vw;
     border-color:black;
@@ -110,7 +109,7 @@ canvas{
 }
 
 .projectDescription{
-    font-size: 25px;
+    font-size: 35px;
     min-width: 100%;
 }
 
