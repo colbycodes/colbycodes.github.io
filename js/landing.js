@@ -45,7 +45,7 @@ blockGroups[1].rotateOnAxis(new THREE.Vector3(1, 0, 0), -90 * (Math.PI/180));
 blockGroups[1].position.set(side.x, side.y - (floorSize - 1.5), side.z + .5);
 side = blockGroups[2].position;
 blockGroups[2].rotateOnAxis(new THREE.Vector3(0, 0, 1), 90 * (Math.PI/180));
-blockGroups[2].position.set(side.x + .5, side.y - (floorSize - 1.5), side.z + .5);
+blockGroups[2].position.set(side.x + .5, side.y - (floorSize - 1.5), side.z);
 side = blockGroups[3].position;
 blockGroups[3].rotateOnAxis(new THREE.Vector3(1, 0, 0), 90 * (Math.PI/180));
 blockGroups[3].position.set(side.x, side.y + .5, side.z + (floorSize - 1.5));
@@ -87,7 +87,7 @@ welcomeScene.add( sphere )
 //create connecting lines
 for(i = 0; i < lines.length; i++)
 {
-     lines[i] = CreateLineBetween(new THREE.Vector3(3.5, -3.5, 3.5), new THREE.Vector3(10, 7, 7));
+    // lines[i] = CreateLineBetween(new THREE.Vector3(20, -40, 10), new THREE.Vector3(20, 40, 10));
 }
 
 //generate a block with 10x10 lots

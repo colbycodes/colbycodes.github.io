@@ -68,8 +68,8 @@ canvas{
 
 .card{
     margin:auto;
-    margin-right: 10vw;
-    margin-left: 10vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
     border-color:black;
     color: black;
     background-color: #6c727c;
@@ -94,6 +94,19 @@ canvas{
 .carousel{
     margin-top:5vh;
     margin-bottom:5vh;
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next{
+    font-size: 120%;
+}
+
+.carousel-control-prev{
+    margin-left: -4vw;
+}
+
+.carousel-control-next{
+    margin-right: -4vw;
 }
 
 .projectDescription{
