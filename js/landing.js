@@ -1,25 +1,26 @@
 var welcomeScene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 3), 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 var sphereCount = 45;
 var spheres = new Array(sphereCount);
+var sphereDirection = 1;
 var lines = new Array(3);
 var blockGroups = new Array(6);
 var cubeGroup = new THREE.Group();
 
 //width and height of window 
 var width = window.innerWidth;
-var height = window.innerHeight;
+var height = window.innerHeight * 3;
 
 //set the size of our renderer and add it to the document
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth, window.innerHeight * 3);
 renderer.shadowMapEnabled = true;
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
 renderer.setClearColor (0x21252d, 1);
 
 //cameras starting position
-camera.position.y = -10;
-camera.position.z = 30;
+camera.position.y = -50;
+camera.position.z = 80;
 camera.position.x = 3.5;
 //camera.lookAt(7, 0, 7);
 //generate a 3x3 block of lots with .5 padding between
@@ -71,9 +72,33 @@ light.shadowDarkness = 8;
 light.shadowCameraVisible = true;
 welcomeScene.add( light );
 
-var sphere = CreateSphere(2);
-sphere.position.set(light.position.x, light.position.y, light.position.z);
-welcomeScene.add( sphere )
+var middleSphere = CreateSphere(1.5);
+middleSphere.position.set(3.25, -31.5, 0);
+welcomeScene.add( middleSphere );
+var rightSphere = CreateSphere(.5);
+rightSphere.position.set(3.25, -31.5, 0);
+welcomeScene.add( rightSphere );
+var leftSphere = CreateSphere(.5);
+leftSphere.position.set(3.25, -31.5, 0);
+welcomeScene.add( leftSphere );
+var leftPos = new THREE.Vector2(leftSphere.position.x, leftSphere.position.y);
+var rightPos = new THREE.Vector2(rightSphere.position.x, rightSphere.position.y);
+lines[0] = CreateLineBetween(leftSphere.position, rightSphere.position);
+welcomeScene.add(lines[0]);
+
+
+function GenerateSineWave(points)
+{
+    var sinePoints = new Array(points);
+    for(i = 0; i < sinePoints.length; i++)
+    {
+        var x, y;
+        x = i;
+        y = Math.sin(x);
+        sinePoints[i] = new THREE.Vector3(x, y, 0);
+    }
+    return sinePoints;
+}
 
 function CreateFloor(size)
 {
@@ -103,7 +128,7 @@ function CreateSphere(radius)
 {   
     var colorHex = GetRandomColor();
     var geometry = new THREE.SphereGeometry( radius, 16, 16 );
-    var material = new THREE.MeshToonMaterial({color:0xffffff});
+    var material = new THREE.MeshBasicMaterial({color:0x42f4e8});
     //var material = THREE.OutlineEffect(material);
     var sphere = new THREE.Mesh( geometry, material );
     return sphere;
@@ -213,9 +238,12 @@ window.addEventListener('resize', function()
     width = this.window.innerWidth;
     height = this.window.innerHeight;
     
-    renderer.setSize(width, height);
-    camera.aspect = width/height;
-    camera.updateProjectionMatrix(); 
+    //set the size of our renderer and add it to the document
+    renderer.setSize(window.innerWidth, window.innerHeight * 3);
+    camera.aspect = width/(height*3);
+    camera.updateProjectionMatrix();
+    
+    //sphere.position.set(-width / 30, sphere.position.y, sphere.position.z);
 });
 
 //sim logic
@@ -227,8 +255,28 @@ var update = function()
     var theta = .003;
     var pointIsWorld = false;
 
-    sphere.position.set(light.position.x, light.position.y, light.position.z);
-    rotateAboutPoint(cubeGroup, point, axis, theta, pointIsWorld); 
+    //sphere.position.set(light.position.x, light.position.y, light.position.z);
+    rotateAboutPoint(cubeGroup, point, axis, theta, pointIsWorld);
+    
+    
+    //animate project section spheres
+    if(rightSphere.position.x > 10+7)
+    {
+        sphereDirection = -sphereDirection;
+    }
+    if(rightSphere.position.x < 3.25)
+    {
+        sphereDirection = -sphereDirection;
+        rightSphere.material.color.setHex(GetRandomColor());
+        leftSphere.material.color.setHex(GetRandomColor());
+    }
+    rightSphere.position.set(rightSphere.position.x + (.05 * sphereDirection), rightSphere.position.y, rightSphere.position.z);
+    leftSphere.position.set(leftSphere.position.x + (.05 * -sphereDirection), leftSphere.position.y, leftSphere.position.z);
+
+    lines[0].geometry.vertices[0].x = leftSphere.position.x;
+    lines[0].geometry.vertices[1].x = rightSphere.position.x;
+    lines[0].geometry.verticesNeedUpdate = true;
+
 };
 
 // draw scenes

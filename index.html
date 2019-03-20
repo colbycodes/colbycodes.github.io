@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-
 <head>
     <title>ColbyLee</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-    
-
     <div id="WelcomeRender"></div>
     <div class="intro">
         <div class="intro-text">Welcome! I'm Colby Lee,<br> a Front-End Developer.<br>
-            <a href="#projectsCarousel"><button type="button" class="btn btn-danger btn-lg">sounds good</button></a>
+            <a href="#projectsGrid"><button type="button" class="btn btn-danger btn-lg">sounds good</button></a>
         </div>
     </div>
-    <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+    <div id="projectsGrid">
+        <div class="row">
+            <div class="col-sm-6 col-centered">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Auto Quote App</h5>
+                        <div id="cf">
+                            <img class="top" src="imgs/autosplash.png">
+                        </div>
+                            <img class="bottom" src="imgs/autoquote.png">                   
+                            
+                        <p class="card-text">An app that allows users to instantly obtain an auto quote while storing all data used in the calculation in an SQL database for administrator reference. </p>
+                        <center><a href="#" class="btn btn-primary">Project Source</a></center>               
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-centered">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Ninja Directory</h5>
+                        <div id="cf">
+                                <img class="top" src="imgs/ninjasplash.png">
+                            </div>
+                                <img class="bottom" src="imgs/ninjadirectory.png"> 
+                        <p class="card-text">A directory of ninjas for hire created with AngularJS demonstrating efficent use of two-way data binding. Users can add and order ninjas by price or belt color.</p>
+                        <center><a href="#" class="btn btn-primary">Project Source</a></center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-centered">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bookmark Preview Tool</h5>
+                            <img src="imgs/bookmarks.jpg">
+                            <p class="card-text">ASP.NET application created to give users a visual preview of their bookmarks as well as ways to organize them through the use of collections and tags.</p>
+                            <center><a href="#" class="btn btn-primary">Project Source</a></center>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-centered">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">PathfinderJS</h5>
+                        <div id="cf">
+                            <img class="top" src="imgs/astarsplash.png">
+                        </div>
+                        <img class="bottom" src="imgs/astar.png">
+                        <div class="tools-used"></div>
+                        <p class="card-text">A simple demonstration of the A * algorithm. Users can create a maze, place a start and end tile then watch the algorithm find its way through</p>
+                        <center><a href="#" class="btn btn-primary">Project Source</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#projectsCarousel" data-slide-to="1"></li>
@@ -72,9 +126,9 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
-          </div>
-            
-    
+          </div> -->
+
+
     <!-- <div id="Portfolio" class="container-fluid">
         <div class="card">
             <div class="card-body">
@@ -91,19 +145,22 @@
             </div>
         </div>
     </div> -->
-    
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="js/three.js"></script>
-        <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
-        <script src="js/landing.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/three.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 <footer>
 
-      
+
 </footer>
