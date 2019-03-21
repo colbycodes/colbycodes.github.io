@@ -44,14 +44,24 @@ canvas{
     max-width: 100%;
     left: 0;
     right: 0;
-    margin: auto
+    margin: auto;
     
+    
+}
+
+.card-block{
+    width: 355px;
+    position: relative;
 }
 
 .py-5{
     margin: auto;
     position: relative;
     text-align: center;
+    border-bottom: #555;
+    border-bottom-style: solid;
+    border-top-style: none;
+    margin-bottom: 5px;
 }
 
 
@@ -95,6 +105,9 @@ canvas{
     right: 0;
     margin: auto;
     text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    min-width: 355px;
 }
 
 .card-title{
@@ -121,9 +134,11 @@ canvas{
 }
 
 .card{
-    width: 300px;
-    height: 190px;
+    width: 355px;
+    height: 210px;
     margin: auto;
+    padding-right: 3px;
+    padding-left: 3px;
     background-color: #6c727c;
     -webkit-transition: height .5s ease-in-out;
     -moz-transition: height .5s ease-in-out;
@@ -140,7 +155,11 @@ canvas{
 }
 
 .card:hover{
-    height: 340px;
+    height: 385px;
+}
+
+.card-text{
+    font-size: 20px;
 }
 
 
@@ -188,18 +207,32 @@ canvas{
 .about-me{
     position: relative;
     color: white;
-    width: 300px;
+    width: 400px;
     text-align: center;
     left: 0;
     right: 0;
     margin: auto;
-    font-family: "moon"
+    font-family: "moon";
+    padding-top: 20px;
+}
+
+.about-me p{
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 20px;
+    min-width: 400px;
+    text-align: center;
 }
 
 .about-me img{
-    width: 150px;
-    height: 200px;
+    width: 220px;
+    height: 300px;
     border-radius: 30%;
+}
+
+.about-me h4{
+    font-size: 30px;
 }
 
 .icon-container{
@@ -213,7 +246,30 @@ canvas{
 
 .icon-container img{
     width: 40px;
-    height: 40px;
+    height: auto;
+    -webkit-transition: height, width .25s ease-in-out;
+    -moz-transition: height, width .25s ease-in-out;
+    -o-transition: height, width .25s ease-in-out;
+    transition: height, width .25s ease-in-out;
+}
+
+.card-block a img{
+    width: 40px;
+    height: auto;
+    -webkit-transition: height, width .25s ease-in-out;
+    -moz-transition: height, width .25s ease-in-out;
+    -o-transition: height, width .25s ease-in-out;
+    transition: height, width .25s ease-in-out;
+}
+
+.card-block a img:hover{
+    width:45px;
+    height: auto;
+}
+
+.icon-container img:hover{
+    width:45px;
+    height: auto;
 }
 
 
