@@ -26,17 +26,6 @@ canvas{
     border-style: solid;
 }
 
-.container{
-    display: flex;
-    padding-top:25%;
-    padding-bottom:25%;
-    margin: auto;
-    border: 2px;
-    border-color: #6c727c;
-    border-style: solid;
-    border-top: 0px;    
-}
-
 #aboutme{
     background-color: #21252d;   
 }
@@ -46,39 +35,25 @@ canvas{
     font-family: "Moon";
 }
 
-
-.carousel-inner{
+#projectsGrid{
+    position:absolute;
+    text-align: center;
+    top: 100vh;
+    padding-top: 4.5vh;
     align-content: center;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto
     
 }
 
-#Portfolio{
-    border-style: solid;
-    display: flex;
-    font-family: "Moon";
+.py-5{
+    margin: auto;
+    position: relative;
+    text-align: center;
 }
 
-.myPicture{
-    image-orientation: -40deg;
-    width: 25%;
-    height: 35%;
-    vertical-align: middle;
-    border-radius: 5px;
-}
-
-.card{
-    border-color:white;
-    color: black;
-    background-color: #6c727c;
-    text-align: left;
-    overflow-x: auto;
-    min-height: 100%;
-}
-
-
-.projectTitle{
-    text-align: left;
-}
 
 .carousel{
     margin-top: 10;   
@@ -114,51 +89,12 @@ canvas{
     text-align: center;
 }
 
-#projectsGrid{
-    position: absolute;
-    top: 100vh;
-    width: 100%;
-    padding-top: 10vh; 
-}
-
-.glass{
-	/* background styles */
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background-color: rgb(0, 0, 0); /*for compatibility with older browsers*/
-	background-image: linear-gradient(rgb(182, 0, 39),rgb(216, 103, 131));
-
-	/* text styles */
-	text-decoration: none;
-	color: #fff;
-	font-size: 20px;
-	font-family: sans-serif;
-	font-weight: 100;
-}
-
 .col-centered{
-    
-    max-width: 30vw;
-    height: 30vh;
     float: none;
-    margin-right:auto;
-    margin-left: auto;
-}
-
-.card-body a{
+    left:0;
+    right: 0;
+    margin: auto;
     text-align: center;
-}
-
-.card-body{
-    min-height: 60vh;
-}
-
-.card-body img{
-    width: 100%;
-    border-style: solid;
-    border-color: #6c727c;
-    border-radius: 10px;
 }
 
 .card-title{
@@ -166,6 +102,9 @@ canvas{
     text-align: center;
     font-size: 30px;
     font-family: "Moon";
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: white;
     color: black;
 }
 
@@ -175,12 +114,46 @@ canvas{
 }
 
 
+
+.card img{
+    width: 80%;
+    border-radius: 5px;
+}
+
+.card{
+    width: 300px;
+    height: 190px;
+    margin: auto;
+    background-color: #6c727c;
+    -webkit-transition: height .5s ease-in-out;
+    -moz-transition: height .5s ease-in-out;
+    -o-transition: height .5s ease-in-out;
+    transition: height .5s ease-in-out;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.card a img{
+    width: 40px;
+    height: 40px;
+}
+
+.card:hover{
+    height: 340px;
+}
+
+
 #cf{
     position: relative;
 }
 
 #cf img{
     position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -191,13 +164,6 @@ canvas{
     opacity:0;
   }
 
-
-.row{
-    float: none;
-    margin-right:auto;
-    margin-left: auto;
-    padding-bottom: 3vh;
-}
 
 
 .projectTitle{
@@ -212,22 +178,43 @@ canvas{
     font-size: 25px;
 }
 
-.col-sm-6{
-    height: 100%;
-}
-
-
-
-
 
 .toolsUsed{
     padding-top:20px;
     font-size: 20px;
 }
 
-.col-lg{
-    vertical-align: middle;
+.about-me{
+    position: relative;
+    color: white;
+    width: 300px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: "moon"
 }
+
+.about-me img{
+    width: 150px;
+    height: 200px;
+    border-radius: 30%;
+}
+
+.icon-container{
+    display: flex;
+    text-align: center;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.icon-container img{
+    width: 40px;
+    height: 40px;
+}
+
 
 ::-webkit-scrollbar {
     width: 10px;

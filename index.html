@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <head>
     <title>ColbyLee</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <div id="WelcomeRender"></div>
     <div class="intro">
@@ -13,138 +15,93 @@
         </div>
     </div>
     <div id="projectsGrid">
-        <div class="row">
-            <div class="col-sm-6 col-centered">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Auto Quote App</h5>
-                        <div id="cf">
-                            <img class="top" src="imgs/autosplash.png">
-                        </div>
-                            <img class="bottom" src="imgs/autoquote.png">                   
-                            
-                        <p class="card-text">An app that allows users to instantly obtain an auto quote while storing all data used in the calculation in an SQL database for administrator reference. </p>
-                        <center><a href="#" class="btn btn-primary">Project Source</a></center>               
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-centered">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Ninja Directory</h5>
-                        <div id="cf">
-                                <img class="top" src="imgs/ninjasplash.png">
+        <div class="py-5">
+            <div class="container">
+                <div class="row hidden-md-up">
+                    <div class="col-lg-4 col-centered">
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Auto Quote</h4>
+                                <div id="cf">
+                                    <img class="top" src="imgs/autosplash.png">
+                                </div>
+                                <img class="bottom" src="imgs/autoquote.png">
+                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <p class="card-text p-y-1">An app that allows users to obtain an auto quote while
+                                    storing all data used in the calculation in an SQL database for administrator
+                                    reference. </p>
+                                    <a href="https://github.com/clobslee/The-Tech-Academy-C-Sharp-Coding-Projects/tree/master/MVCPractical" target="_blank"><img src="imgs/github.png"></a>
+                                
                             </div>
-                                <img class="bottom" src="imgs/ninjadirectory.png"> 
-                        <p class="card-text">A directory of ninjas for hire created with AngularJS demonstrating efficent use of two-way data binding. Users can add and order ninjas by price or belt color.</p>
-                        <center><a href="#" class="btn btn-primary">Project Source</a></center>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-centered">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Bookmark Preview Tool</h5>
-                            <img src="imgs/bookmarks.jpg">
-                            <p class="card-text">ASP.NET application created to give users a visual preview of their bookmarks as well as ways to organize them through the use of collections and tags.</p>
-                            <center><a href="#" class="btn btn-primary">Project Source</a></center>
+                    <div class="col-lg-4 col-centered">
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Bookmark Preview</h4>
+                                <img src="imgs/bookmarks.jpg">
+                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <p class="card-text p-y-1">ASP.NET application created to give users a visual preview
+                                    of their bookmarks as well as ways to organize them through the use of collections
+                                    and tags.</p>                                   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-centered">
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Ninja Directory</h4>
+                                <div id="cf">
+                                    <img class="top" src="imgs/ninjasplash.png">
+                                </div>
+                                <img class="bottom" src="imgs/ninjadirectory.png">
+                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <p class="card-text p-y-1">A directory of ninjas for hire created with AngularJS
+                                    demonstrating efficent use of two-way data binding. Users can add and order ninjas
+                                    by price or belt color.</p>
+                                    <a href="https://github.com/colbycodes/AngularJSProjects/tree/master/NinjaTurtlesDirectory" target="_blank"><img src="imgs/github.png"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-4 col-centered">
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">A* Pathfinder</h4>
+                                <div id="cf">
+                                    <img class="top" src="imgs/astarsplash.png">
+                                </div>
+                                <img class="bottom" src="imgs/astar.png">
+                                <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <p class="card-text p-y-1">A simple demonstration of the A * algorithm. Users can
+                                    create a maze, place a start and end tile then watch the algorithm find its way
+                                    through.</p>
+                                    <a href="https://github.com/clobslee/A-Pathfinding" target="_blank"><img src="imgs/github.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-sm-6 col-centered">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">PathfinderJS</h5>
-                        <div id="cf">
-                            <img class="top" src="imgs/astarsplash.png">
-                        </div>
-                        <img class="bottom" src="imgs/astar.png">
-                        <div class="tools-used"></div>
-                        <p class="card-text">A simple demonstration of the A * algorithm. Users can create a maze, place a start and end tile then watch the algorithm find its way through</p>
-                        <center><a href="#" class="btn btn-primary">Project Source</a></center>
-                    </div>
+        <div class="about-me">
+            <h4>Who is this guy?</h4>
+            <img src="imgs/me.jpg">
+            <div class="icon-container">
+                <div class="icons">
+                    <a href="https://github.com/clobslee" target="_blank"><img src="imgs/github.png"></a>
+                    <a href="https://www.linkedin.com/in/colby-lee/" target="_blank"><img src="imgs/linkedin.png"></a>
+                    <a href="resume/ColbyLeeSoftwareResume.pdf" target="_blank"><img src="imgs/resume.png"></a>
                 </div>
             </div>
+            <p>
+                A driven individual with a passion for software development. I'm quick to learn and enjoy incorporating
+                new technologies in my work. I love creating things and am constantly looking for the next problem to
+                tackle. If I'm not at my computer you will likely find me throwing a slobbery ball in the backyard or
+                in search of a caffeinated treat.
+            </p>
         </div>
     </div>
-    <!-- <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#projectsCarousel" data-slide-to="1"></li>
-              <li data-target="#projectsCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card card-block d-flex">
-                    <div class="projectTitle">Auto Quote App</div>
-                    <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg">
-                            <img src="./imgs/placeholder.png" class="d-block" alt="...">
-                          </div>
-                          <div class="col-sm">
-                            <div class="projectDescription">This web form calculates a users insurance price using form parameters and displays the quoted price to the user. All parameters used in the calculation as well as contact information are stored in an SQL database and can be accessed via the apps adminstrator view.</div> 
-                                <div class="toolsUsed">
-                                    <h6>Languages and Libraries Used</h6>
-                                    <ul>
-                                    <li>C#</li>
-                                    <li>SQL</li>
-                                    <li>HTML5</li>
-                                    <li>CSS</li>
-                                    <li>Bootstrap</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                        <div class="projectTitle">Bookmark Preview Tool</div>
-                        <div class="container-fluid">
-                            <img src="./imgs/placeholder.png" class="d-block" alt="...">
-                        </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card">
-                    <div class="projectTitle">Pathfinder</div>
-                    <div class="container-fluid">
-                      <img src="./imgs/placeholder.png" class="d-block" alt="...">
-                    </div>
-                </div>
-            </div>
-            </div>
-            <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div> -->
-
-
-    <!-- <div id="Portfolio" class="container-fluid">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Auto Quote</h4>
-                <p class="card-text">Here are the top resources for all things related to the Sun.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Path Finder</h4>
-                <p class="card-text">Here are the top resources for all things related to the Sun.</p>
-                <a href="#" class="card-link">Sun Gone</a>
-                <a href="#" class="card-link">Still Gone</a>
-            </div>
-        </div>
-    </div> -->
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"

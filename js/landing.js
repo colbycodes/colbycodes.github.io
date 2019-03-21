@@ -87,6 +87,7 @@ lines[0] = CreateLineBetween(leftSphere.position, rightSphere.position);
 welcomeScene.add(lines[0]);
 
 
+
 function GenerateSineWave(points)
 {
     var sinePoints = new Array(points);
