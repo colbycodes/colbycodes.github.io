@@ -1,5 +1,5 @@
 var welcomeScene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 3), 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / (window.innerHeight * 2), 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({ antialias: true });
 var sphereCount = 45;
 var spheres = new Array(sphereCount);
@@ -10,17 +10,17 @@ var cubeGroup = new THREE.Group();
 
 //width and height of window 
 var width = window.innerWidth;
-var height = window.innerHeight * 3;
+var height = window.innerHeight * 2;
 
 //set the size of our renderer and add it to the document
-renderer.setSize(window.innerWidth, window.innerHeight * 3);
+renderer.setSize(window.innerWidth, window.innerHeight * 2);
 renderer.shadowMapEnabled = true;
 renderer.shadowMapType = THREE.PCFSoftShadowMap;
 renderer.setClearColor (0x21252d, 1);
 
 //cameras starting position
-camera.position.y = -50;
-camera.position.z = 80;
+camera.position.y = -29;
+camera.position.z = 55;
 camera.position.x = 3.5;
 //camera.lookAt(7, 0, 7);
 //generate a 3x3 block of lots with .5 padding between
@@ -240,8 +240,8 @@ window.addEventListener('resize', function()
     height = this.window.innerHeight;
     
     //set the size of our renderer and add it to the document
-    renderer.setSize(window.innerWidth, window.innerHeight * 3);
-    camera.aspect = width/(height*3);
+    renderer.setSize(window.innerWidth, window.innerHeight * 2);
+    camera.aspect = width/(height*2);
     camera.updateProjectionMatrix();
     
     //sphere.position.set(-width / 30, sphere.position.y, sphere.position.z);

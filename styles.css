@@ -131,6 +131,7 @@ canvas{
     transition: height .5s ease-in-out;
     overflow: hidden;
     margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card a img{
