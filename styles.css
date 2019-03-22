@@ -49,10 +49,7 @@ canvas{
     
 }
 
-.card-block{
-    width: 500px;
-    position: relative;
-}
+
 
 .py-5{
     margin: auto;
@@ -64,6 +61,15 @@ canvas{
     margin-bottom: 5px;
 }
 
+.py-5 h1{
+    font-family: "Moon";
+    color: white;
+    border-style: groove;
+    border-color: #f4425f;
+    border-radius: 5px;
+    width: 90vw;
+    margin:auto;
+}
 
 .carousel{
     margin-top: 10;   
@@ -110,6 +116,11 @@ canvas{
     min-width: 500px;
 }
 
+.card-block{
+    width: 500px;
+    position: relative;
+}
+
 .card-title{
     font-family: "Moon";
     text-align: center;
@@ -125,8 +136,6 @@ canvas{
     position: absolute;
     top:10%;
 }
-
-
 
 .card img{
     width: 80%;
