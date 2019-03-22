@@ -164,11 +164,11 @@ canvas{
 }
 
 .card:hover{
-    height: 420px;
+    height: 480px;
 }
 
 .card-text{
-    font-size: 20px;
+    font-size: 25px;
     padding: 2px;
 }
 
