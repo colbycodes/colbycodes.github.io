@@ -169,7 +169,7 @@ canvas{
 }
 
 .card:hover{
-    height: 480px;
+    height: 485px;
 }
 
 .card-text{
@@ -242,11 +242,7 @@ canvas{
     text-align: center;
 }
 
-.about-me h1{
-    position: relative;
-    border-style: inset;
-    border-radius: 5px;
-}
+
 
 .about-me img{
     width: 220px;
@@ -332,6 +328,8 @@ canvas{
         color: white;
         text-align: center;
     }
+
+    
 }
   
 
@@ -343,6 +341,13 @@ canvas{
 .icon-container img:hover{
     width:45px;
     height: auto;
+}
+
+.about-me h1{
+    position: relative;
+    border-style: inset;
+    border-color: #42dff4;
+    border-radius: 5px;
 }
 
 
