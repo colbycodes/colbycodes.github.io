@@ -237,7 +237,7 @@ canvas{
     left: 0;
     right: 0;
     margin: auto;
-    font-size: 20px;
+    font-size: 25px;
     min-width: 400px;
     text-align: center;
 }
@@ -245,7 +245,6 @@ canvas{
 .about-me h1{
     position: relative;
     border-style: inset;
-    border-color: #42dff4;
     border-radius: 5px;
 }
 
