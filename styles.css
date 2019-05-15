@@ -183,6 +183,7 @@ canvas{
     line-height: 30px;
     text-align: left;
     padding-left: 10px;
+    color: black;
 }
 
 .card-block img{
